@@ -15,7 +15,7 @@ st.set_page_config(page_title="Dashboard Telecommunication", layout="wide")
 df = pd.read_csv('C:/Users/DESMOND/telecom-analysis/data/cleaned_data.csv')
 print(df.head())
 
-st.sidebar.checkbox("Show Analysis by State", True, key=1)
+st.sidebar.checkbox("Show Analysis by handset", True, key=1)
 select = st.sidebar.selectbox('Select a State',df['handset_manufacturer'])
 
 #get the state selected in the selectbox
