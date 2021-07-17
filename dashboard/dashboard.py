@@ -13,12 +13,14 @@ st.set_page_config(page_title="Dashboard Telecommunication", layout="wide")
 
 
 df = pd.read_csv('C:/Users/DESMOND/telecom-analysis/data/cleaned_data.csv')
-print(df.head())
 
-st.sidebar.checkbox("Show Analysis by handset", True, key=1)
-select = st.sidebar.selectbox('Select a State',df['handset_manufacturer'])
+st.title("Dashboard for Telecommunication Analysis")
+st.markdown('The dashboard will visualize the Telecommunication situation for improvement')
+st.markdown('')
+st.sidebar.title("Visualization Selector")
+st.sidebar.markdown("Select the Charts/Plots accordingly:")
 
-#get the state selected in the selectbox
-state_data = df[df['handset_manufacturer'] == select]
-select_status = st.sidebar.radio("Covid-19 patient's status", ('Confirmed',
-'Active', 'Recovered', 'Deceased'))
+
+#Bar Chart
+st.bar_chart(df['youtube'])
+
